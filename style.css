@@ -1,0 +1,40 @@
+header { grid-area: header; }
+aside { grid-area: aside; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+
+.container {
+  display: grid;
+
+  grid-template-areas: 
+    "header header"
+    "aside aside"
+    "main main"
+    "footer footer";
+}
+
+header, aside, main, footer {
+  margin: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pic {
+  text-align: center;
+  border: 1px solid gray;
+  margin: 30px;
+  padding: 3px;
+}
+
+@media (max-width: 550px) {
+  header, aside, main, footer {
+    margin: 0
+  }
+}
